@@ -160,7 +160,7 @@ export default function getDataBase() {
   return new Promise((resolve, reject) => {
       setTimeout(() => {
           resolve(dataBase);
-      }, 2000);
+      }, 500);
   });
   }
 

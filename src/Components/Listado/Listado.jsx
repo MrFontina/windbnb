@@ -21,7 +21,7 @@ const [ listado, setListado ] = useState([])
           <div className="card" key={id}>
             <img src={item.photo} alt=""/>
             <div className="misc">
-             { (item.superHost) ? (<span>Super Host</span>) : null }
+             { (item.superHost) ? (<span className="superHost">Super Host</span>) : null }
               <p>{item.type}</p>
               <span>*{item.rating}</span>
             </div>
