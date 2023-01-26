@@ -5,9 +5,11 @@ import './resultados.css'
 
 function Resultados() {
 
-    let params = useParams();
-    let keyword = params.keyword;
+    const { city, guests } = useParams();
+   
     const [ listadoResults, setListadoResults] = useState([]);
+
+    let guestsNumber = parseFloat(guests)
 
     useEffect(()=>{
         getDataBase().then(
@@ -15,7 +17,7 @@ function Resultados() {
         )
     },[])
 
-    const newListado = listadoResults.filter(casa => casa.city === keyword)
+    const newListado = listadoResults.filter(casa => casa.city === city &&  casa.maxGuests <= guestsNumber )
 
 
   return (
@@ -23,7 +25,11 @@ function Resultados() {
         <>
         {newListado.length > 0 ? 
         <>
-        <h2 className="match">Stays in {keyword}</h2>
+        <div className="match">
+          <h2 className="city">Stays in {city}</h2>  
+          <h4 className="stays">{newListado.length}+ stays</h4>
+        </div>
+        
         <div className="containerCards"> 
         {newListado.map((item, id) => {
             return (

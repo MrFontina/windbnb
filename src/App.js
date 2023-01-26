@@ -11,7 +11,7 @@ function App() {
     <NavBar/>
     <Routes>
     <Route path="/" element={<Listado/>}></Route>
-    <Route path="resultados/:keyword" element={<Resultados/>}></Route>
+    <Route path="resultados/:city/:guests" element={<Resultados/>}></Route>
     </Routes>
     
     </BrowserRouter>

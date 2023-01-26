@@ -12,14 +12,10 @@ function Buscador() {
   const navigate = useNavigate()
   const handlerCity = e => {
     e.preventDefault();
-    const keyword = e.currentTarget.keyword.value;
-    const correctKeyword = capitalizeFirstLetter(keyword)
-    
-    
-    navigate(`/resultados/${correctKeyword}`)
-   
-    
-    
+    const city = e.currentTarget.city.value;
+    const guests = e.currentTarget.guests.value;
+    const correctCity = capitalizeFirstLetter(city)   
+    navigate(`/resultados/${correctCity}/${guests}`)  
   }
 
 
@@ -27,10 +23,10 @@ function Buscador() {
   return (
     <form onSubmit={handlerCity}>
       <label>
-        <input  type="text" name="keyword" placeholder="city" />
+        <input  type="text" name="city" placeholder="city" />
       </label>
       <label>
-        <input type="text" placeholder="add guest" />
+        <input type="text" name="guests" placeholder="add guest" />
       </label>
       <button type="submit">buscar</button>
     </form>
