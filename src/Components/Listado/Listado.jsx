@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import getDataBase from "./stays"
 import './listado.css'
 
+
 function Listado() {
 const [ listado, setListado ] = useState([])
 
@@ -23,7 +24,12 @@ const [ listado, setListado ] = useState([])
             <div className="misc">
              { (item.superHost) ? (<span className="superHost">Super Host</span>) : null }
               <p>{item.type}</p>
-              <span>*{item.rating}</span>
+              <div>
+                <span className="material-symbols-outlined">star</span>
+                
+                <span className="rate">{item.rating}</span>
+              </div>
+              
             </div>
             <p>{item.title} </p>
           </div>

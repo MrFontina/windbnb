@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import './buscador.css'
 
 
 function Buscador() {
@@ -21,14 +22,20 @@ function Buscador() {
 
 
   return (
-    <form onSubmit={handlerCity}>
+    <form onSubmit={handlerCity} className="buscador">
       <label>
-        <input  type="text" name="city" placeholder="city" />
+        <input  type="text" name="city" placeholder="city" className="cityBuscador"/>
       </label>
+      <span className="separador"></span>
       <label>
-        <input type="text" name="guests" placeholder="add guest" />
+        <input type="text" name="guests" placeholder="add guest" className="guestBuscador"/>
       </label>
-      <button type="submit">buscar</button>
+      <span className="separador"></span>
+        <button type="submit" className="boton"><span className="material-symbols-outlined">
+search
+</span></button>
+      
+      
     </form>
   )
 }

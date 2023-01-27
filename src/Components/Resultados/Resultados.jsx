@@ -17,7 +17,7 @@ function Resultados() {
         )
     },[])
 
-    const newListado = listadoResults.filter(casa => casa.city === city &&  casa.maxGuests <= guestsNumber )
+    const newListado = listadoResults.filter(casa => (casa.city === city || casa.country === city ) &&  casa.maxGuests <= guestsNumber )
 
 
   return (
@@ -38,7 +38,11 @@ function Resultados() {
             <div className="misc">
              { (item.superHost) ? (<span className="superHost">Super Host</span>) : null }
               <p>{item.type}</p>
-              <span>*{item.rating}</span>
+              <div>
+                <span className="material-symbols-outlined">star</span>
+                
+                <span className="rate">{item.rating}</span>
+              </div>
             </div>
             <p>{item.title} </p>
           </div>)            

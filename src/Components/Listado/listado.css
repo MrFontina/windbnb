@@ -66,3 +66,30 @@ width: 81px;
 height: 15px;
 text-align: center;
 }
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  color: #EB5757;
+}
+
+
+.rate{
+width: 31px;
+height: 17px;
+top: -4px;
+position: relative;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+
+color: #4F4F4F;
+}
