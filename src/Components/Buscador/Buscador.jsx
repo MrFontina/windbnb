@@ -28,7 +28,7 @@ function Buscador() {
       </label>
       <span className="separador"></span>
       <label>
-        <input type="text" name="guests" placeholder="add guest" className="guestBuscador"/>
+        <input type="text" name="guests" placeholder="Add guest" className="guestBuscador"/>
       </label>
       <span className="separador"></span>
         <button type="submit" className="boton"><span className="material-symbols-outlined">
